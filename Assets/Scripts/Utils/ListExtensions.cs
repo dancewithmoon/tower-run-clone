@@ -7,4 +7,9 @@ public static class ListExtensions
     {
         return list[Random.Range(0, list.Count)];
     }
+    
+    public static T GetRandomItem<T>(this T[] array)
+    {
+        return array[Random.Range(0, array.Length)];
+    }
 }

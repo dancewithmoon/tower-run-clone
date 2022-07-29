@@ -4,7 +4,7 @@ using ScriptableObjects;
 using UnityEngine;
 using UserInput;
 
-namespace Player
+namespace Gameplay.Player
 {
     [RequireComponent(typeof(Rigidbody))]
     public class Jumper : MonoBehaviour

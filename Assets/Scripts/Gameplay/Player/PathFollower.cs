@@ -3,7 +3,7 @@ using PathCreation;
 using ScriptableObjects;
 using UnityEngine;
 
-namespace Player
+namespace Gameplay.Player
 {
     [RequireComponent(typeof(Rigidbody))]
     public class PathFollower : MonoBehaviour
