@@ -14,12 +14,17 @@ namespace Gameplay.Player
         private Rigidbody _rigidbody;
 
         private bool _isGrounded;
-    
+
         private void Awake()
         {
             _input = ServiceLocator.Single<IInputService>();
             _playerParameters = ServiceLocator.Single<PlayerParameters>();
             _rigidbody = GetComponent<Rigidbody>();
+        }
+        
+        public void Stop()
+        {
+            _rigidbody.velocity = Vector3.zero;
         }
 
         private void Update()
@@ -33,10 +38,7 @@ namespace Gameplay.Player
 
         private void OnCollisionEnter(Collision collision)
         {
-            if (collision.gameObject.CompareTag(Tags.Road))
-            {
-                _isGrounded = true;
-            }
+            _isGrounded = collision.gameObject.CompareTag(Tags.Road);
         }
     }
 }

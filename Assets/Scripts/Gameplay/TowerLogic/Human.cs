@@ -6,5 +6,7 @@ namespace Gameplay.TowerLogic
     {
         [SerializeField] private Transform _fixationPoint;
         public Transform FixationPoint => _fixationPoint;
+        [SerializeField] private Transform _footsPoint;
+        public Transform FootsPoint => _footsPoint;
     }
 }
