@@ -7356,6 +7356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7df0743460942a9419a6689efdcb7676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 2259344143213628322}
   _fixationPoint: {fileID: 4326794560291830671}
   _footsPoint: {fileID: 240828754724160171}
 --- !u!1 &2164953716254157128

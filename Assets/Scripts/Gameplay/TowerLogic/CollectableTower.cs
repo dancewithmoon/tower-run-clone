@@ -46,5 +46,26 @@ namespace Gameplay.TowerLogic
             }
             return null;
         }
+
+        public void Break()
+        {
+            foreach (Human human in _humansInTower)
+            {
+                human.transform.parent = null;
+                human.Animator.applyRootMotion = false;
+                
+                var humanRigidbody = human.gameObject.AddComponent<Rigidbody>();
+                humanRigidbody.AddForce(
+                    new Vector3(GetRandomForce(), 0, GetRandomForce()), ForceMode.Force);
+                humanRigidbody.AddTorque(GetRandomForce(),GetRandomForce(), GetRandomForce());
+                Destroy(human.gameObject, 1f);
+            }
+            Destroy(gameObject, 1f);
+        }
+
+        private float GetRandomForce()
+        {
+            return Random.Range(-300, 300);
+        }
     }
 }

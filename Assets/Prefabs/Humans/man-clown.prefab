@@ -7810,6 +7810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7df0743460942a9419a6689efdcb7676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 939282983134856973}
   _fixationPoint: {fileID: 3832703232716594177}
   _footsPoint: {fileID: 3365553028037393834}
 --- !u!1 &891202055454146383

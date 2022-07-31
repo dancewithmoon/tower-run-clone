@@ -25,9 +25,19 @@ namespace Gameplay.Player
         {
             if (other.TryGetComponent(out Human human) && _humans.Contains(human) == false)
             {
-                _jumper.Stop();
-                CollectHumansFromTower(human.GetComponentInParent<CollectableTower>());
+                var touchedTower = human.GetComponentInParent<CollectableTower>();
+                if(touchedTower == null)
+                    return;
+                
+                TouchCollectableTower(touchedTower);
             }
+        }
+
+        private void TouchCollectableTower(CollectableTower touchedTower)
+        {
+            _jumper.Stop();
+            CollectHumansFromTower(touchedTower);
+            touchedTower.Break();
         }
         
         private void CollectHumansFromTower(CollectableTower collectableTower)

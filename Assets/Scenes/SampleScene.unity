@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef034bba298da3d42a6d70230537d925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _endOfPathInstruction: 0
+  _endOfPathInstruction: 2
 --- !u!54 &345540303
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -327,6 +327,7 @@ MonoBehaviour:
   _checkCollider: {fileID: 345540305}
   _fixationMaxDistance: 1
   _footsPoint: {fileID: 1401870630}
+  _jumper: {fileID: 345540306}
 --- !u!43 &625566432
 Mesh:
   m_ObjectHideFlags: 0
